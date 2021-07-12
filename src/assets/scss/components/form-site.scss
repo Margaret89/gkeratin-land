@@ -1,0 +1,93 @@
+/*-------------- form-site -----------------*/
+.form-site{
+	&__title{
+		@include font(normal, 300, 3rem, 1.2, #000);
+		text-align: center;
+		margin-bottom: 33px;
+	}
+
+	&__item{margin-bottom: 12px;}
+
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		display: inline-block;
+		height: 6rem;
+		width: 100%;
+		font-family: $font-site;
+		@include font(normal, normal, 1.6rem, 5.8rem, #000);
+		padding: 0 24px;
+		border-radius: 5px;
+		border: 1px solid #e6e6e6;
+		outline: 0;
+		margin: 0;
+		background: transparent;
+		box-shadow: none;
+		transition: border 0.2s ease 0s;
+	}
+
+	textarea{
+		height: 12rem;
+		line-height: 1.5;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus{
+		border-color: $color-orange;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder,
+	textarea::placeholder{
+		color: #999;
+	}
+
+	&__btn{
+		margin-top: 12px;
+
+		.btn{width: 100%;}
+	}
+
+	&__polit{
+		max-width: 200px;
+		margin: 20px auto 0;
+		
+		.input-check__text{
+			font-size: 1.4rem;
+			line-height: 1.4;
+		}
+	}
+}
+
+// @media (max-width: 991px) {
+// 	.form-page{
+// 		.form-site{
+// 			display: block;
+
+// 			&__info{
+// 				width: 100%;
+// 				margin: 0 0 30px;
+// 			}
+	
+// 			&__content{width: 100%;}
+// 		}
+// 	}
+// }
+
+// @media (max-width: 767px) {
+// 	.form-site{
+// 		&__item_half{width: calc(100% - 30px);}
+// 	}
+
+// 	.form-page{
+// 		margin-top: 40px;
+// 		padding: 40px 0;
+
+// 		.form-site{
+// 			&__title{font-size: 2.4rem;}
+// 		}
+// 	}
+// }

@@ -9,14 +9,293 @@ block variables
 		];
 
 block content
-	section
+	section.about
+		.container
+			.row
+				.col-6
+					h1 Официальный дистрибьютор GKhair
+
+					.about__label
+						.about__label-text в России с 2011 года
+
+					.about__text Станьте официальным представителем бренда профессиональной косметики премиум-класса для волос GKhair в своем регионе уже сегодня и получите выгодное индивидуальное предложение сотрудничества.
+				
+				.col-6.d-flex.justify-content-end
+					form.form-site
+						.form-site__title <b>Стань</b> партнером
+
+						.form-site__fields
+							.form-site__item
+								input(type="text", placeholder="Ваше имя")
+
+							.form-site__item
+								input.js-phone(type="text", placeholder="Ваш телефон")
+
+							.form-site__item
+								input(type="email", placeholder="Эл. почта")
+
+						.form-site__btn
+							button.btn.btn_border Готово
+
+						.form-site__polit
+							.input-check
+								input#polit(type='checkbox', checked="checked")
+								label.input-check__label(for='polit')
+									span.input-check__mark
+										+svg('ic-tick','ic-tick', '10', '8')
+									span.input-check__text Я согласен на обработку 
+										a(href="#") персональных данных
+
+	section.advant-wrap
+		.container
+			.row.align-items-center
+				.col-6
+					img(src="assets/img/gk.png", alt="")
+
+				.col-6
+					.advant
+						-
+							var list=[
+								{icon:'advant1.png', text:'Дистрибьютор с', nbsp:'true', text_second:'2011 года'},
+								{icon:'advant2.png', text:'Только оригинальная сертифицированная продукция'},
+								{icon:'advant3.png', text:'Быстрая доставка по', nbsp:'true', text_second:'всей России'},
+								{icon:'advant4.png', text:'Маркетинговая поддержка'},
+							]
+						each item in list
+							.advant__item
+								.advant__icon
+									img(src="assets/img/"+item.icon, alt="")
+								.advant__text= item.text
+									if(item.nbsp)
+										|&nbsp;
+									if(item.text_second)
+										=item.text_second
+
+
+	section.cat-sect-wrap
 		.container
 			.row
 				.col-12
-					h1 содержание
-					ul
-						each page in pagelist
-							li
-								a(href=page.href, target="_blank")= page.name
+					h2
+						b Каталог
+
+			.cat-sect
+				.row
+					-
+						var list=[
+							{img:'sect1.png', title:'Домашний уход', text:'с', nbsp:'true', text_second:'кератином'},
+							{img:'sect2.png', title:'Кератиновое восставновление', text:'и', nbsp:'true', text_second:'выпрямление'},
+							{img:'sect3.png', title:'Приборы', text:'и', nbsp:'true', text_second:'аксессуары'},
+							{img:'sect4.png', title:'Система', text:'окрашивания'},
+						]
+					each item in list
+						.col-6
+							a(href="#").cat-sect-item
+								.cat-sect-item__content
+									.cat-sect-item__text
+										b= item.title
+										| 
+										span= item.text
+											if(item.nbsp)
+												|&nbsp;
+											if(item.text_second)
+												=item.text_second
+
+								.cat-sect-item__img
+									img(src="assets/img/"+item.img, alt="")
+
+			.spec
+				.row
+					-
+						var list=[
+							{img:'spec1.png', title:'Продукция не тестируется', text:'на животных'},
+							{img:'spec2.png', title:'Косметика не содержит', text:'SLS, SLES, хлорида натрия'},
+							{img:'spec3.png', title:'Серия веганских продуктов', text:'для питания всех типов волос '},
+						]
+					each item in list
+						.col-4
+							.spec__item
+								.spec__img
+									img(src="assets/img/"+item.img, alt="")
+								.spec__content
+									b= item.title
+									br
+									=item.text
+
+	section.cat-list-slider-wrap
+		.container
+			.row
+				.col-12
+					.h2 <b>Популярные</b> продукты
+
+					.cat-list-slider.js-cat-list-slider
+						-
+							var list=[
+								{
+									img:'catalog5.jpg',
+									title:'Moisturizing Shampoo Color Protection GKhair 300 мл.',
+									text:'Увлажняющий шампунь с защитой цвета',
+									status:'Много',
+									price:'1 550 ₽',
+								},
+
+								{
+									img:'catalog5.jpg',
+									title:'Moisturizing Shampoo Color Protection GKhair 300 мл.',
+									text:'Moisturizing Conditioner Color Protection GKhair 300 мл.',
+									status:'Много',
+									price:'580 ₽',
+									sticker:[
+										{text:'хит'},
+									]
+								},
+
+								{
+									img:'catalog5.jpg',
+									title:'Balancing Shampoo GKhair 300 мл.',
+									text:'Набор увлажняющий',
+									status:'Достаточно',
+									price:'2 720 ₽',
+									sticker:[
+										{text:'new', color: 'green'},
+									]
+								},
+								{
+									img:'catalog6.jpg',
+									title:'Serum GKhair 50 мл.',
+									text:'Аргановый серум, сыворотка для волос',
+									status:'Много',
+									price:'1 930 ₽',
+								},
+
+								{
+									img:'catalog1.jpg',
+									title:'Dry Oil Shine Spray GKhair 115 мл.',
+									text:'Сухое масло - спрей для блеска',
+									status:'Достаточно',
+									price:'1 215 ₽',
+									sticker:[
+										{text:'хит'},
+									]
+								},
+
+								{
+									img:'catalog2.jpg',
+									title:'VolumizeHer Spray GKhair 30 мл.',
+									text:'Спрей для создания объёма',
+									status:'Мало',
+									price:'580 ₽',
+									sticker:[
+										{icon:'ic-present', icon_width:'20', icon_height:'18', color:'purple'},
+									]
+								},
+
+								{
+									img:'catalog3.jpg',
+									title:'Moisturizing Box',
+									text:'Набор увлажняющий',
+									status:'Достаточно',
+									price:'2 720 ₽',
+									sticker:[
+										{text:'new', color: 'green'},
+										{icon:'ic-sale', icon_width:'23', icon_height:'18', color: 'yellow'},
+									]
+								},
+
+								{
+									img:'catalog4.jpg',
+									title:'Cashmere GKhair 50 мл.',
+									text:'Крем - кашемир, сыворотка',
+									status:'Много',
+									price:'1 700 ₽',
+									sticker:[
+										{icon:'ic-like', icon_width:'20', icon_height:'20', color: 'pink'},
+									]
+								},
+
+								{
+									img:'catalog2.jpg',
+									title:'VolumizeHer Spray GKhair 30 мл.',
+									text:'Спрей для создания объёма',
+									status:'Мало',
+									price:'580 ₽',
+									sticker:[
+										{icon:'ic-present', icon_width:'20', icon_height:'18', color:'purple'},
+									]
+								},
+
+								{
+									img:'catalog3.jpg',
+									title:'Moisturizing Box',
+									text:'Набор увлажняющий',
+									status:'Достаточно',
+									price:'2 720 ₽',
+									sticker:[
+										{text:'new', color: 'green'},
+										{icon:'ic-sale', icon_width:'23', icon_height:'18', color: 'yellow'},
+									]
+								},
+
+								{
+									img:'catalog4.jpg',
+									title:'Cashmere GKhair 50 мл.',
+									text:'Крем - кашемир, сыворотка',
+									status:'Много',
+									price:'1 700 ₽',
+									sticker:[
+										{icon:'ic-like', icon_width:'20', icon_height:'20', color: 'pink'},
+									]
+								},
+
+								{
+									img:'catalog1.jpg',
+									title:'Dry Oil Shine Spray GKhair 115 мл.',
+									text:'Сухое масло - спрей для блеска',
+									status:'Достаточно',
+									price:'1 215 ₽',
+									sticker:[
+										{text:'хит'},
+									]
+								},
+							]
+						each item in list
+							.cat-item
+								.cat-item__img-wrap
+									if(item.sticker)
+										.sticker
+											each sticker in item.sticker
+												.sticker__item
+													.sticker__bg(class=sticker.color?'sticker__bg_'+sticker.color:'')
+														if(sticker.icon == 'ic-sale')
+															+svg('bg-sale','bg-sale', '50', '50')
+														else
+															+svg('bg-sticker','bg-sticker', '50', '50')
+
+													if(sticker.text)
+														.sticker__text=sticker.text
+
+													if(sticker.icon)
+														.sticker__icon
+															+svg(sticker.icon, sticker.icon, sticker.icon_width, sticker.icon_height)
+
+									a(href="#").cat-item__img
+										img(src="assets/img/"+item.img, alt="")
 
 
+								.cat-item__content
+									.cat-item__info
+										.cat-item__title
+											a(href="#")= item.title
+
+										.cat-item__text= item.text
+
+									.cat-item__bottom
+										.cat-item__status
+											+svg('ic-tick','ic-tick', '10', '8')
+											=item.status
+
+										.cat-item__price
+											span.cat-item__cur-price= item.price
+					
+					.cat-list-slider-more
+						a.btn.btn_border(href='#') Перейти в каталог

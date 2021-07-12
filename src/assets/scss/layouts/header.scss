@@ -1,0 +1,40 @@
+.header{
+	padding: 10px 0;
+	border-bottom: 1px solid #ebebeb;
+
+	&__phone{
+		display: inline-flex;
+		align-items: center;
+		@include font(normal, normal, 2.2rem, 1.2, #000);
+		text-decoration: none;
+
+		.icon{
+			display: block;
+			flex: 0 0 18px;
+			width: 18px;
+			fill: #ccc;
+			margin-right: 10px;
+			transition: fill 0.2s ease 0s;
+		}
+	}
+
+	&__phone:hover{
+		color: $color-orange;
+		.icon{fill: $color-orange;}
+	}
+}
+
+.social{
+	display: flex;
+	align-items: center;
+
+	&__item{
+		margin: 0 15px;
+		transition: opacity 0.2s ease 0s;
+	}
+
+	&__item:hover{opacity: 0.6;}
+
+	.ic-vk{fill: #2486f3;}
+	.ic-fb{fill: #3b5998;}
+}

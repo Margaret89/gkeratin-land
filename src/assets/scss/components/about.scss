@@ -1,0 +1,47 @@
+/*-------------- about -----------------*/
+.about{
+	padding: 100px 0;
+	margin-bottom: 100px;
+	background: #f5f5f5 url(../img/bg-about.jpg) no-repeat top right;
+
+	h1,.h1{
+		margin-top: -13px;
+		margin-bottom: 0;
+	}
+
+	&__label{
+		display: inline-block;
+		@include font(normal, 500, 2.2rem, 1.2, #fff);
+		margin-top: 18px;
+		position: relative;
+		padding: 15px 33px;
+	}
+
+	&__label::before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+		background: linear-gradient(to right, rgba(255,124,23,1) 0%, rgba(255,162,22,1) 100%);
+		box-shadow: 0px 26px 46px 0px rgba(255, 124, 23, 0.16);
+		transform: skew(-10deg);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__label-text{position: relative;}
+
+	&__text{
+		@include font(normal, normal, 1.8rem, 1.55, $color-text);
+		margin-top: 32px;
+	}
+
+	.form-site{
+		min-width: 450px;
+		padding: 42px 50px 45px;
+		background: #fff;
+		border-radius: 20px;
+	}
+}
