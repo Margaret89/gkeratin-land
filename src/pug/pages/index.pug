@@ -9,16 +9,16 @@ block variables
 		];
 
 block content
-	section.about
+	section.top-block
 		.container
 			.row
 				.col-6
 					h1 Официальный дистрибьютор GKhair
 
-					.about__label
-						.about__label-text в России с 2011 года
+					.top-block__label
+						.top-block__label-text в России с 2011 года
 
-					.about__text Станьте официальным представителем бренда профессиональной косметики премиум-класса для волос GKhair в своем регионе уже сегодня и получите выгодное индивидуальное предложение сотрудничества.
+					.top-block__text Станьте официальным представителем бренда профессиональной косметики премиум-класса для волос GKhair в своем регионе уже сегодня и получите выгодное индивидуальное предложение сотрудничества.
 				
 				.col-6.d-flex.justify-content-end
 					form.form-site
@@ -46,26 +46,26 @@ block content
 									span.input-check__text Я согласен на обработку 
 										a(href="#") персональных данных
 
-	section.advant-wrap
+	section.fact-wrap
 		.container
-			.row.align-items-center
+			.row
 				.col-6
 					img(src="assets/img/gk.png", alt="")
 
-				.col-6
-					.advant
+				.col-6.d-flex.align-items-center
+					.fact
 						-
 							var list=[
-								{icon:'advant1.png', text:'Дистрибьютор с', nbsp:'true', text_second:'2011 года'},
-								{icon:'advant2.png', text:'Только оригинальная сертифицированная продукция'},
-								{icon:'advant3.png', text:'Быстрая доставка по', nbsp:'true', text_second:'всей России'},
-								{icon:'advant4.png', text:'Маркетинговая поддержка'},
+								{icon:'fact1.png', text:'Дистрибьютор с', nbsp:'true', text_second:'2011 года'},
+								{icon:'fact2.png', text:'Только оригинальная сертифицированная продукция'},
+								{icon:'fact3.png', text:'Быстрая доставка по', nbsp:'true', text_second:'всей России'},
+								{icon:'fact4.png', text:'Маркетинговая поддержка'},
 							]
 						each item in list
-							.advant__item
-								.advant__icon
+							.fact__item
+								.fact__icon
 									img(src="assets/img/"+item.icon, alt="")
-								.advant__text= item.text
+								.fact__text= item.text
 									if(item.nbsp)
 										|&nbsp;
 									if(item.text_second)
@@ -299,3 +299,86 @@ block content
 					
 					.cat-list-slider-more
 						a.btn.btn_border(href='#') Перейти в каталог
+
+
+	section.advant-wrap.bg-grey
+		.container
+			.row
+				.col-12
+					h2 <b>Преимущества</b> бренда GKhair
+			.row
+				.col-6
+					img(src="assets/img/girl.png", alt="")
+
+				.col-6
+					.advant
+						-
+							var list=[
+								{img:'advant1.png', text:'Косметика GKHAIR содержит запатентованый комплекс JUVEXIN — это настоящий прорыв в области ухода за волосами'},
+								{img:'advant2.png', text:'75+ стран и 5,000,000 человек сделали свой выбор в пользу GKHAIR'},
+								{img:'advant3.png', text:'Бренд GKHAIR адаптирован для работы со славянскими волосами, что позволяет создавать непревзойденные результаты на любом типе волос'},
+								{img:'advant4.png', text:'Программы ухода GKHAIR дают мгновенный результат, регенерируют поврежденную структуру волос благодаря уникальным компонентам в составе'},
+							]
+
+						.row
+							each item in list
+								.col-6
+									.advant__item
+										.advant__img
+											img(src="assets/img/"+item.img, alt="")
+										.advant__text= item.text
+
+
+	section.about-wrap
+		.container
+			.row
+				.offset-1.col-4
+					h2 <b>О</b> нас
+
+					p С 2011 года ООО «ГКератин» официальный представитель бренда косметики премиум-класса GKhair (Америка). Компания уже много лет является надежным партнером в области бьюти-индустрии. Мы за высокий уровень сотрудничества и продвижения и предлагаем встать на путь успеха вместе с нашей командой. 
+					p «ГКератин»- это не просто компания, это сообщество профессионалов индустрии красоты, которые помогут вам построить свой бизнес и предложат наиболее выгодные индивидуальные условия для развития и партнерства.
+
+				.offset-1.col-5
+					img(src="assets/img/about1.jpg", alt="")
+
+			br
+			br
+			.row
+				.col-5
+					img(src="assets/img/about2.jpg", alt="")
+
+				.offset-1.col-5
+					p Более 10 лет нашей продукцией пользуются профессиональные стилисты и их клиенты, что обусловлено высокой эффективностью средств и их безупречным качеством. В ассортименте линеек бренда представлены, в том числе веганские средства для ухода за волосами. Вся продукция сертифицирована, производство ведется с учетом всех европейских эко-стандартов и ориентировано на уменьшение вреда для окружающей среды. 
+					p Если вы давно развиваете свой бизнес в сфере индустрии красоты и желаете заняться дистрибуцией в своем регионе, добро пожаловать в нашу команду!
+
+
+	section.form-page-wrap
+		.container
+			.row
+				.col-12
+					.form-page
+						form.form-site
+							.form-site__title Стань дистрибьютором
+
+							.form-site__fields
+								.form-site__item
+									input(type="text", placeholder="Ваше имя")
+
+								.form-site__item
+									input.js-phone(type="text", placeholder="Ваш телефон")
+
+								.form-site__item
+									input(type="email", placeholder="Эл. почта")
+
+							.form-site__bottom
+								.form-site__btn
+									button.btn.btn_border Отправить
+
+								.form-site__polit
+									.input-check
+										input#polit-dist(type='checkbox', checked="checked")
+										label.input-check__label(for='polit-dist')
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '10', '8')
+											span.input-check__text Я согласен на обработку 
+												a(href="#") персональных данных
