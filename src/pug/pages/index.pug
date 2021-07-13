@@ -12,15 +12,16 @@ block content
 	section.top-block
 		.container
 			.row
-				.col-6
-					h1 Официальный дистрибьютор GKhair
+				.col-md-6
+					.top-block__content
+						h1 Официальный дистрибьютор GKhair
 
-					.top-block__label
-						.top-block__label-text в России с 2011 года
+						.top-block__label
+							.top-block__label-text в России с 2011 года
 
-					.top-block__text Станьте официальным представителем бренда профессиональной косметики премиум-класса для волос GKhair в своем регионе уже сегодня и получите выгодное индивидуальное предложение сотрудничества.
+						.top-block__text Станьте официальным представителем бренда профессиональной косметики премиум-класса для волос GKhair в своем регионе уже сегодня и получите выгодное индивидуальное предложение сотрудничества.
 				
-				.col-6.d-flex.justify-content-end
+				.col-md-6.d-flex.justify-content-end
 					form.form-site
 						.form-site__title <b>Стань</b> партнером
 
@@ -49,10 +50,11 @@ block content
 	section.fact-wrap
 		.container
 			.row
-				.col-6
-					img(src="assets/img/gk.png", alt="")
+				.col-md-6
+					.fact-wrap__img
+						img(src="assets/img/gk.png", alt="")
 
-				.col-6.d-flex.align-items-center
+				.col-md-6.d-flex.align-items-center
 					.fact
 						-
 							var list=[
@@ -71,7 +73,6 @@ block content
 									if(item.text_second)
 										=item.text_second
 
-
 	section.cat-sect-wrap
 		.container
 			.row
@@ -89,7 +90,7 @@ block content
 							{img:'sect4.png', title:'Система', text:'окрашивания'},
 						]
 					each item in list
-						.col-6
+						.col-lg-6
 							a(href="#").cat-sect-item
 								.cat-sect-item__content
 									.cat-sect-item__text
@@ -113,7 +114,7 @@ block content
 							{img:'spec3.png', title:'Серия веганских продуктов', text:'для питания всех типов волос '},
 						]
 					each item in list
-						.col-4
+						.col-md-6.col-lg-4
 							.spec__item
 								.spec__img
 									img(src="assets/img/"+item.img, alt="")
@@ -300,17 +301,16 @@ block content
 					.cat-list-slider-more
 						a.btn.btn_border(href='#') Перейти в каталог
 
-
 	section.advant-wrap.bg-grey
 		.container
 			.row
 				.col-12
 					h2 <b>Преимущества</b> бренда GKhair
 			.row
-				.col-6
+				.col-lg-5.col-xl-6.align-items-end.d-none.d-lg-flex
 					img(src="assets/img/girl.png", alt="")
 
-				.col-6
+				.col-lg-7.col-xl-6
 					.advant
 						-
 							var list=[
@@ -322,7 +322,7 @@ block content
 
 						.row
 							each item in list
-								.col-6
+								.col-md-6
 									.advant__item
 										.advant__img
 											img(src="assets/img/"+item.img, alt="")
@@ -332,22 +332,22 @@ block content
 	section.about-wrap
 		.container
 			.row
-				.offset-1.col-4
+				.col-md-6.offset-lg-1.col-lg-4
 					h2 <b>О</b> нас
 
 					p С 2011 года ООО «ГКератин» официальный представитель бренда косметики премиум-класса GKhair (Америка). Компания уже много лет является надежным партнером в области бьюти-индустрии. Мы за высокий уровень сотрудничества и продвижения и предлагаем встать на путь успеха вместе с нашей командой. 
 					p «ГКератин»- это не просто компания, это сообщество профессионалов индустрии красоты, которые помогут вам построить свой бизнес и предложат наиболее выгодные индивидуальные условия для развития и партнерства.
 
-				.offset-1.col-5
+				.col-md-6.offset-lg-1.col-lg-5
 					img(src="assets/img/about1.jpg", alt="")
 
 			br
 			br
 			.row
-				.col-5
+				.col-md-6.col-lg-5.order-2.order-md-1
 					img(src="assets/img/about2.jpg", alt="")
 
-				.offset-1.col-5
+				.col-md-6.offset-lg-1.col-lg-5.order-1.order-md-2
 					p Более 10 лет нашей продукцией пользуются профессиональные стилисты и их клиенты, что обусловлено высокой эффективностью средств и их безупречным качеством. В ассортименте линеек бренда представлены, в том числе веганские средства для ухода за волосами. Вся продукция сертифицирована, производство ведется с учетом всех европейских эко-стандартов и ориентировано на уменьшение вреда для окружающей среды. 
 					p Если вы давно развиваете свой бизнес в сфере индустрии красоты и желаете заняться дистрибуцией в своем регионе, добро пожаловать в нашу команду!
 

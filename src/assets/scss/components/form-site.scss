@@ -68,7 +68,7 @@
 .form-page{
 	background: #383838 url(../img/wave-dark.png) no-repeat top right;
 	border-radius: 20px;
-	padding: 70px;
+	padding: 70px 100px;
 	color: #fff;
 	position: relative;
 	overflow: hidden;
@@ -81,16 +81,20 @@
 		border-radius: 50%;
 		background: $color-orange;
 		position: absolute;
-		top: -300px;
-		left: -300px;
+		top: -270px;
+		left: -295px;
 	}
 
 	.form-site{
 		position: relative;
 
 		&__title{
+			font-size: 4.6rem;
+			line-height: 1.12;
+			font-weight: bold;
 			color: #fff;
 			text-align: left;
+			margin-bottom: 2rem;
 		}
 
 		&__fields{
@@ -122,42 +126,46 @@
 		&__bottom{
 			display: flex;
 			align-items: center;
-			margin: 10px -10px 0;
+			margin: 0 -10px;
 
-			&__btn{width: calc(33.33% - 20px);}
 			.btn{color: #fff;}
 		}
 
-		&__polit{margin: 0 0 0 20px;}
+		&__btn{
+			width: calc(33.33% - 20px);
+			margin: 10px;
+		}
+
+		&__polit{
+			margin: 0 0 0 10px;
+			.input-check__text{color: #fff;}
+		}
 	}
 }
 
-// @media (max-width: 991px) {
-// 	.form-page{
-// 		.form-site{
-// 			display: block;
+@media (max-width: 991px) {
+	.form-page{
+		.form-site{
+			&__fields{display: block;}
+			&__item{width: calc(100% - 20px);}
+			&__btn{width: auto;}
+		}
+	}
+}
 
-// 			&__info{
-// 				width: 100%;
-// 				margin: 0 0 30px;
-// 			}
-	
-// 			&__content{width: 100%;}
-// 		}
-// 	}
-// }
+@media (max-width: 767px) {
+	.form-page-wrap{margin-top: 50px;}
 
-// @media (max-width: 767px) {
-// 	.form-site{
-// 		&__item_half{width: calc(100% - 30px);}
-// 	}
+	.form-page{
+		padding: 30px 20px;
 
-// 	.form-page{
-// 		margin-top: 40px;
-// 		padding: 40px 0;
+		.form-site{
+			&__title{font-size: 2.8rem;}
+			&__bottom{display: block;}
+		}
+	}
 
-// 		.form-site{
-// 			&__title{font-size: 2.4rem;}
-// 		}
-// 	}
-// }
+	.form-site{
+		&__title{font-size: 2.8rem;}
+	}
+}

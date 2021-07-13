@@ -24,3 +24,30 @@
 		margin-bottom: 6.5rem;
 	}
 }
+
+@media (max-width: 1500px) {
+	.about-wrap{
+		.container::before{
+			right: 0;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.about-wrap{
+		.container::before{
+			width: 360px;
+			height: 360px;
+			border-width: 100px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.about-wrap{
+		font-size: 1.6rem;
+		margin: 50px 0;
+		.container::before{display: none;}
+		h2, .h2{margin-bottom: 4rem;}
+	}
+}

@@ -35,3 +35,36 @@
 		@include font(normal, normal, 1.8rem, 1.44, $color-text);
 	}
 }
+
+@media (max-width: 991px) {
+	.fact-wrap{margin: 100px 0;}
+	
+	.fact{
+		&__item:nth-child(2),
+		&__item:nth-child(3){
+			margin-left: 50px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.fact-wrap{
+		margin: 50px 0;
+
+		&__img{
+			max-width: 300px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.fact{
+		&__item:not(:last-child){margin-bottom: 20px;}
+		
+		&__item:nth-child(2),
+		&__item:nth-child(3){
+			margin-left: 0;
+		}
+
+		&__text{font-size: 1.6rem;}
+	}
+}

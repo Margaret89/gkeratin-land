@@ -45,3 +45,29 @@
 		border-radius: 20px;
 	}
 }
+
+@media (max-width: 991px) {
+	.top-block{
+		background-position: -500px 0;
+
+		&__label{font-size: 1.8rem;}
+
+		.form-site{
+			min-width: 0;
+			width: 100%;
+			padding: 32px 30px 35px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.top-block{
+		padding: 50px 0;
+		margin-bottom: 50px;
+
+		&__label{font-size: 1.4rem;}
+		&__text{font-size: 1.6rem;}
+		&__content{margin-bottom: 30px;}
+		.form-site{padding: 17px 20px 15px;}
+	}
+}

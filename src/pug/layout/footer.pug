@@ -1,7 +1,33 @@
 footer.footer
 	.container
 		.row
-			.col-12 footer
+			.col-md-3
+				a(href="#").footer__logo
+					img(src="assets/img/logo-big.png", alt="")
+			.col-md-6
+				.footer__phone
+					a(href="tel:+78005050984") 8 (800) <b>505 098 4</b>
+
+
+				.footer-contacts
+					.footer-contacts__item
+						.footer-contacts__label WhatsApp Business
+						.footer-contacts__text
+							a(href="tel:+79523741444") +7952-374-14-44
+
+					.footer-contacts__item
+						.footer-contacts__label Эл. почта
+						.footer-contacts__text
+							a(href="mailto:info@gkeratin.ru") info@gkeratin.ru
+
+			.col-md-3.d-flex.justify-content-md-end
+				.app
+					.app__item
+						a(href="#")
+							img(src="assets/img/googleplay.png", alt="")
+					.app__item
+						a(href="#")
+							img(src="assets/img/appstore.png", alt="")
 
 .move-up.js-move-up
 	+svg('ic-arrow-up','ic-arrow-up', '20', '10')
